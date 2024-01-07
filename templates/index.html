@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5;url=http://127.0.0.1:5000" />
+    <title>Meme App</title>
+</head>
+
+<body>
+    <h1>Welcome To Meme App</h1>
+    <p>Refreshing in : <span id="timer">5</span></p>
+    <img src="{{meme_pic}}" alt="">
+    <p>Current Subreddit: {{subreddit}}</p>
+
+    <script>
+        const timer = document.getElementById("timer");
+        setInterval(() => {
+            timer.innerText = parseInt(timer.innerText) - 1;
+        }, 1000)
+    </script>
+</body>
+
+</html>
